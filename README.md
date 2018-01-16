@@ -97,7 +97,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Walkthrough
 
-When the application begins running there are no chats. I left the fake database array empty. You can start an initial conversation with a simulated response by saying hello or anything you else. I created a small response generator that contains a small amount of responses which are triggered by sending messages via the user input. The conversation won’t last long, its only there to show that the front end supports the ui updates for a realtime chat scenario.
+When the application begins running there are no chats. I left the fake database array empty. You can start an initial conversation with a simulated response by saying hello or anything else. I created a small response generator that contains a small amount of responses which are triggered by sending messages via the user input. The conversation won’t last long, its only there to show that the front end supports the ui updates for a realtime chat scenario.
 
 Anything that is said during the chat conversation is persisted to the backend by a fake database api.
 
