@@ -4,6 +4,8 @@ var cors = require('cors');
 var socketio = require('socket.io');
 var io;
 
+var database = require('./db/db');
+
 var app = express();
 app.use(cors());
 server = http.createServer(app);

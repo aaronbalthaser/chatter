@@ -11,7 +11,8 @@ The project is comprised of a multi tier architecture with the api directory con
 What things you need to install the software and how to install them
 
 ```
-Give examples
+Angular CLI
+Node JS
 ```
 
 ### Installing
@@ -42,28 +43,6 @@ Then to start the front end server run:
 ng server
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-There are no tests as they were outside the scope of this project.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
 ## Built With
 
 * [Angular JS](https://angular.io/docs/) - The Javascript framework used
@@ -87,3 +66,13 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * Inspiration: Code challenge
+
+## Code Challenge Project Notes
+
+1. I changed up the project structure since I’m using Angular CLI to avoid building out Webpack configurations for a scratch project.
+
+2. SCSS is not located in a single file but is separated into files across the project per Angular best practices.
+
+  A. Styles.scss - src/styles.scss: contains global styles, currently resets and minor styles for maintaining percent based dimensions.
+
+  B. All other styles are bound to the related components that comprise the application.
