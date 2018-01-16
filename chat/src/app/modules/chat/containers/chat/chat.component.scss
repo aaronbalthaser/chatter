@@ -1,0 +1,32 @@
+:host {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.chat {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.chats {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+  padding: 12px;
+
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.chat-form {
+  background-color: #42b8fc;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
