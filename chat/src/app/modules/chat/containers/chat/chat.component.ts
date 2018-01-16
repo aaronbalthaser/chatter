@@ -19,7 +19,11 @@ export interface Message {
   template: `
   <div class="chat">
     <section #chat class="chats">
-
+      <chat-bubble
+          [ngStyle]="{'align-self': message.cls}"
+          *ngFor="let message of messages"
+          [data]="message">
+      </chat-bubble>
     </section>
     <section class="chat-form">
       <chat-form
