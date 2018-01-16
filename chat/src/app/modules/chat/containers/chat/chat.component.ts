@@ -6,6 +6,13 @@ import { ChatService } from '../../services/chat.service';
 
 import { Constants } from '../../../../shared/constants';
 
+export interface Message {
+  id: number;
+  author: string;
+  content: string;
+  timestamp: number;
+}
+
 @Component({
   selector: 'chat',
   styleUrls: ['chat.component.scss'],
@@ -15,7 +22,9 @@ import { Constants } from '../../../../shared/constants';
 
     </section>
     <section class="chat-form">
-
+      <chat-form
+        (create)="onSendMessage($event)">
+      </chat-form>
     </section>
   </div>
   `
@@ -31,6 +40,10 @@ export class ChatComponent {
 
   }
 
+  public onSendMessage(event: Message) {
+    console.log(event);
+  }
+
   public getMessages() {
     this.chatService.get()
       .subscribe(
@@ -44,7 +57,6 @@ export class ChatComponent {
 
             return message;
           });
-          console.log(this.messages);
         }
       );
   }

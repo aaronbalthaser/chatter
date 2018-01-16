@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpModule } from '@angular/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 /* Module Dependencies */
 
@@ -8,6 +8,7 @@ import { HttpModule } from '@angular/http';
 import { ChatComponent } from './containers/chat/chat.component';
 
 /* Components */
+import { ChatFormComponent } from './components/chat-form/chat-form.component';
 
 /* Services */
 import { ChatService } from './services/chat.service';
@@ -17,10 +18,11 @@ import { ChatService } from './services/chat.service';
 @NgModule({
   imports: [
     CommonModule,
-    HttpModule
+    ReactiveFormsModule
   ],
   declarations: [
-    ChatComponent
+    ChatComponent,
+    ChatFormComponent
   ],
   providers: [
     ChatService
