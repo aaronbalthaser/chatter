@@ -76,3 +76,11 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
   A. Styles.scss - src/styles.scss: contains global styles, currently resets and minor styles for maintaining percent based dimensions.
 
   B. All other styles are bound to the related components that comprise the application.
+
+3. Component architecture consists of the use of one module with three components:
+
+  A. Chat Component - serves as a smart/container component.
+
+  B. Chat Form Component - serves as a dumb/child component.
+
+  C. Chat Bubble Component - serves as a dumb/child component.

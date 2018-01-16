@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked, ElementRef, ViewChild } from '@angular/core';
 
 import io from 'socket.io-client';
 
@@ -38,6 +38,8 @@ export class ChatComponent {
   private socket;
   public messages = [];
 
+  @ViewChild('chat') private scrollContainer: ElementRef;
+
   constructor(
     private chatService: ChatService
   ) {
@@ -65,7 +67,19 @@ export class ChatComponent {
       );
   }
 
+  private scrollToBottom(): void {
+    try {
+      this.scrollContainer.nativeElement.scrollTop =
+      this.scrollContainer.nativeElement.scrollHeight;
+    } catch(err) { }
+  }
+
   ngOnInit() {
     this.getMessages();
+    this.scrollToBottom();
+  }
+
+  ngAfterViewChecked() {
+    this.scrollToBottom();
   }
 }
