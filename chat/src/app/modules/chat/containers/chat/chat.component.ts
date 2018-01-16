@@ -36,6 +36,9 @@ export interface Message {
 
 export class ChatComponent {
   private socket;
+  private user: string = 'Sam';
+  private msgCount = 0;
+
   public messages = [];
 
   @ViewChild('chat') private scrollContainer: ElementRef;
@@ -43,11 +46,29 @@ export class ChatComponent {
   constructor(
     private chatService: ChatService
   ) {
-
+    this.socket = io('http://localhost:9000', { transports: ['websocket'] });
+    this.socket.emit('new user', this.user);
+    this.socket.on('new message', this.onRecieveMessage.bind(this));
   }
 
+  public onRecieveMessage(data) {
+    (data.author === this.user) ?
+      data.cls = Constants.CSS_FLEX_END :
+      data.cls = Constants.CSS_FLEX_START;
+
+    this.messages.push(data);
+    this.scrollToBottom();
+	}
+
   public onSendMessage(event: Message) {
-    console.log(event);
+    this.socket.emit('send message', {
+      id: Date.now(),
+      author: this.user,
+      content: event.content,
+      timestamp: Date.now(),
+      count: this.msgCount
+    });
+    this.msgCount++;
   }
 
   public getMessages() {

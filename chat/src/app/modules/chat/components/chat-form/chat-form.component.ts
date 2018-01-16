@@ -12,7 +12,7 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
             class="cf-input"
             type="text"
             placeholder="message..."
-            formControlName="message"
+            formControlName="content"
             (keyup.enter)="sendMessage()">
         <button
             type="button"
@@ -29,7 +29,7 @@ export class ChatFormComponent {
   @Output() create = new EventEmitter();
 
   form = this.fb.group({
-    message: ['', Validators.required ]
+    content: ['', Validators.required ]
   });
 
   constructor(

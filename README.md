@@ -84,3 +84,24 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
   B. Chat Form Component - serves as a dumb/child component.
 
   C. Chat Bubble Component - serves as a dumb/child component.
+
+## Min Requirments
+
+  A. View previous messages, with the newest message nearest the box where new
+  messages are entered (so, reverse chronological order if you have previous
+  messages appearing below the chatbox, otherwise, chronological order).
+
+  B. Write a message.
+
+  C. Have the message you wrote appear with the other messages, with your message
+  as the most recent.
+
+## Walkthrough
+
+When the application begins running there are no chats. I left the fake database array empty. You can’t start an initial conversation with a simulated response by saying hello are anything you with. I created a small response generator that contains a small amount of responses to your message inputs. The conversation won’t last long, its only to show that the front end supports the ui updates for a realtime scenario.
+
+Anything that is said during the chat conversation is persisted to the backend by a fake database api.
+
+I left the message for the server developer in the backend_design_spec.md
+
+Thanks!
