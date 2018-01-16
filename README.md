@@ -73,27 +73,26 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 2. SCSS is not located in a single file but is separated into files across the project per Angular best practices.
 
-  A. Styles.scss - src/styles.scss: contains global styles, currently resets and minor styles for maintaining percent based dimensions.
-
-  B. All other styles are bound to the related components that comprise the application.
+* Styles.scss - src/styles.scss: contains global styles, currently resets and minor styles for maintaining percent based dimensions.
+* All other styles are bound to the related components that comprise the application.
 
 3. Component architecture consists of the use of one module with three components:
 
-  A. Chat Component - serves as a smart/container component.
+* Chat Component - serves as a smart/container component.
 
-  B. Chat Form Component - serves as a dumb/child component.
+* Chat Form Component - serves as a dumb/child component.
 
-  C. Chat Bubble Component - serves as a dumb/child component.
+* Chat Bubble Component - serves as a dumb/child component.
 
 ## Min Requirments
 
-  A. View previous messages, with the newest message nearest the box where new
+* View previous messages, with the newest message nearest the box where new
   messages are entered (so, reverse chronological order if you have previous
   messages appearing below the chatbox, otherwise, chronological order).
 
-  B. Write a message.
+* Write a message.
 
-  C. Have the message you wrote appear with the other messages, with your message
+* Have the message you wrote appear with the other messages, with your message
   as the most recent.
 
 ## Walkthrough
