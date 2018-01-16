@@ -1,4 +1,4 @@
-# Project Title
+# Chat Application Code Challenge
 
 This is a basic chat application demo using Angular, Node and Socket IO.
 
