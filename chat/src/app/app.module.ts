@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 /* Module Dependencies */
+import { ChatModule } from './modules/chat';
 
 /* Containers */
 import { AppComponent } from './app.component';
@@ -12,7 +13,9 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   imports: [
-    BrowserModule
+    BrowserModule,
+
+    ChatModule
   ],
   declarations: [
     AppComponent
