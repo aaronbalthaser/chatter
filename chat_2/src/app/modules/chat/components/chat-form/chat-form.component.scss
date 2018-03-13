@@ -1,0 +1,66 @@
+:host {
+  display: block;
+  height: 40px;
+  width: 90%;
+}
+
+form,
+.cf-input-container,
+.cf-input {
+  height: 100%;
+  width: 100%;
+}
+
+.cf-input-container {
+  position: relative;
+  background-color: #fff;
+
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.cf-input {
+  font-size: 14px;
+  color: #42b8fc;
+  background-color: transparent;
+  text-indent: 12px;
+
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+}
+
+.cf-button {
+  background-color: #CCC821;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+
+  i {
+    font-size: 20px;
+    color: #fff;
+  }
+}
+
+input::-webkit-input-placeholder {
+  color: rgba(21, 168, 253, 0.75);
+}
+
+input::-moz-placeholder {
+  color: rgba(21, 168, 253, 0.75);
+}
+
+input:-ms-input-placeholder {
+  color: rgba(21, 168, 253, 0.75);;
+}
+
+input:-moz-placeholder {
+  color: rgba(21, 168, 253, 0.75);;
+}
